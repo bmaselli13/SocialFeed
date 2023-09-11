@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  padding: 1px; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,26 +37,25 @@
   }
 }
 
-.post button {
-  margin-right: 10px;
-  padding: 5px 10px;
+.post {
+  padding: 20px;
+  border: 1px solid #eaeaea;
+  margin: 20px 0;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 5px;
   border: none;
   cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.post button:hover {
-  background-color: #e0e0e0;
-}
-
-/* Styling for the active (liked) state */
-.post button.active {
-  background-color: #007BFF;
+  background-color: #61dafb;
   color: white;
 }
 
-/* Styling for the active (disliked) state */
-.post button.dislike-active {
-  background-color: #FF0000;
-  color: white;
+button.liked {
+  background-color: #61da7b;
+}
+
+button.disliked {
+  background-color: red;
 }

@@ -15,7 +15,7 @@
 
 .App-header {
   background-color: #282c34;
-  padding: 1px; 
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,27 +35,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-.post {
-  padding: 20px;
-  border: 1px solid #eaeaea;
-  margin: 20px 0;
-}
-
-button {
-  padding: 10px 15px;
-  margin: 5px;
-  border: none;
-  cursor: pointer;
-  background-color: #61dafb;
-  color: white;
-}
-
-button.liked {
-  background-color: #61da7b;
-}
-
-button.disliked {
-  background-color: red;
 }

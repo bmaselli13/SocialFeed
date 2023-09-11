@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+
+.post button {
+  margin-right: 10px;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.post button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Styling for the active (liked) state */
+.post button.active {
+  background-color: #007BFF;
+  color: white;
+}
+
+/* Styling for the active (disliked) state */
+.post button.dislike-active {
+  background-color: #FF0000;
+  color: white;
+}

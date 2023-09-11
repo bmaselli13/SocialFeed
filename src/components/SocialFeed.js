@@ -1,7 +1,7 @@
 import React from "react";
 import Post from "./Post";
 
-const SocialFeed = ({ posts }) => {
+const SocialFeed = ({ posts, onLike, onDislike }) => {
   return (
     <div>
       <header>
@@ -9,7 +9,7 @@ const SocialFeed = ({ posts }) => {
       </header>
       <main>
         {posts.map((post, index) => (
-          <Post key={index} post={post} />
+          <Post key={index} post={post} onLike={onLike} onDislike={onDislike} />
         ))}
       </main>
     </div>

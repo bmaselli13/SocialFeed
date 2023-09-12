@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./NewPostForm.css";
 
 function NewPostForm({ onPostSubmit }) {
   // State to store user input. Initially an empty string
@@ -28,25 +29,27 @@ function NewPostForm({ onPostSubmit }) {
   return (
     <div className="form-container">
       <form onSubmit={handleSubmit}>
-        <label>
-          Your Name:
-          <input
-            type="text"
-            value={userName}
-            onChange={(e) => setUserName(e.target.value)}
-            className="flex-item"
-          />
-        </label>
-        <br />
-        <label>
-          Your Post:
-          <textarea
-            value={postText}
-            onChange={(e) => setPostText(e.target.value)}
-            className="flex-item"
-          ></textarea>
-        </label>
-        <br />
+        <div className="input-container">
+          <label>
+            Your Name:
+            <input
+              type="text"
+              value={userName}
+              onChange={(e) => setUserName(e.target.value)}
+              className="flex-item"
+            />
+          </label>
+        </div>
+        <div className="input-container">
+          <label>
+            Your Post:
+            <textarea
+              value={postText}
+              onChange={(e) => setPostText(e.target.value)}
+              className="flex-item"
+            ></textarea>
+          </label>
+        </div>
         <button type="submit" className="flex-item">
           Submit
         </button>

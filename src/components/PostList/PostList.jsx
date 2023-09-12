@@ -1,23 +1,17 @@
 import React from "react";
-import Post from "../Post/Post";
-import "./PostList.css";
 
-const PostList = ({ posts, onLike, onDislike }) => {
+function PostList({ posts }) {
   return (
     <div className="post-list">
-      {posts.map((post) => (
-        <Post
-          key={post.id}
-          author={post.author}
-          body={post.body}
-          postId={post.id}
-          postStatus={post.status}
-          onLike={onLike}
-          onDislike={onDislike}
-        />
+      {/* iterate over each item in the posts array */}
+      {posts.map((post, index) => (
+        <div key={index} className="post">
+          <h2>{post.name}</h2>
+          <p>{post.body}</p>
+        </div>
       ))}
     </div>
   );
-};
+}
 
 export default PostList;

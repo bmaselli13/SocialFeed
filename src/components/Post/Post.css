@@ -45,3 +45,14 @@
 .dislike-button:hover {
     background-color: #e02020;
 }
+
+.green {
+    background-color: green;
+    color: white;
+  }
+  
+  .red {
+    background-color: red;
+    color: white;
+  }
+  

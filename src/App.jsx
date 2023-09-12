@@ -1,27 +1,30 @@
 import React, { useState } from "react";
+import "./App.css";
+import NewPostForm from "./components/NewPostForm/NewPostForm";
 import PostList from "./components/PostList/PostList";
-import CreatePostForm from "./components/CreatePostForm/CreatePostForm";
 
-const App = () => {
+function App() {
+  // Used to store lists of posts. Updates using the setPosts function as new posts are added
   const [posts, setPosts] = useState([]);
 
-  const addNewPost = (newPost) => {
-    const postObject = {
-      id: Date.now(),
-      author: newPost.author,
-      body: newPost.body,
-      likes: 0,
-      dislikes: 0,
-    };
-    setPosts([...posts, postObject]);
+  // Function to add a new post
+  const handleNewPost = (newPost) => {
+    // Add the new post to the posts array
+    const updatedPosts = posts.concat(newPost);
+    setPosts(updatedPosts);
   };
 
   return (
     <div className="App">
-      <CreatePostForm onPostSubmit={addNewPost} />
+      <header className="App-header">
+        <h1>SocialFeed</h1>
+      </header>
+      {/* Render the NewPostForm and pass the handleNewPost function */}
+      <NewPostForm onPostSubmit={handleNewPost} />
+      {/* Render the list of posts */}
       <PostList posts={posts} />
     </div>
   );
-};
+}
 
 export default App;

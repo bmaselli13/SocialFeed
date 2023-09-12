@@ -1,58 +1,45 @@
-.post-container {
-    border: 1px solid #eaeaea;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.post {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.post-author {
-    font-weight: bold;
-    margin-bottom: 10px;
+.post h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
-.post-body {
-    margin-bottom: 15px;
+.post p {
+  font-size: 1rem;
+  margin-bottom: 10px;
 }
 
-.post-actions {
-    display: flex;
-    gap: 10px;
+.like-button {
+  background-color: gray;
+  border: none;
+  cursor: pointer; 
+  margin-right: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease; 
+  color: white; 
 }
 
-.like-button, .dislike-button {
-    background-color: #074aa1;
-    color: white;
-    border: none;
-    cursor: pointer;
-    padding: 5px 10px;
-    border-radius: 3px;
-    transition: background-color 0.3s;
+.like-button.liked {
+  background-color: green; 
+  color: white; 
 }
 
-.like-button.active {
-    background-color: #61da7b;
+.dislike-button {
+  background-color: gray;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; 
+  color: white; 
 }
 
-.dislike-button.active {
-    background-color: #f44336;
+.dislike-button.disliked {
+  background-color: red; 
+  color: white; 
 }
-
-.like-button:hover {
-    background-color: #033c7a;
-}
-
-.dislike-button:hover {
-    background-color: #e02020;
-}
-
-.green {
-    background-color: green;
-    color: white;
-  }
-  
-  .red {
-    background-color: red;
-    color: white;
-  }
-  

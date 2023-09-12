@@ -7,10 +7,10 @@ function NewPostForm({ onPostSubmit }) {
 
   // Function to handle post submit
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevents the page from refreshing
+    e.preventDefault(); // Prevents the page from refreshing when the form is submitted
 
     // If the user's name and the post text are not both empty, then create a new post with the user's name as name and the post text as body
-    if (userName.trim() !== "" && postText.trim() !== "") {
+    if (userName !== "" && postText !== "") {
       const newPost = {
         name: userName,
         body: postText,
@@ -26,26 +26,32 @@ function NewPostForm({ onPostSubmit }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Your Name:
-        <input
-          type="text"
-          value={userName}
-          onChange={(e) => setUserName(e.target.value)}
-        />
-      </label>
-      <br />
-      <label>
-        Your Post:
-        <textarea
-          value={postText}
-          onChange={(e) => setPostText(e.target.value)}
-        ></textarea>
-      </label>
-      <br />
-      <button type="submit">Submit</button>
-    </form>
+    <div className="form-container">
+      <form onSubmit={handleSubmit}>
+        <label>
+          Your Name:
+          <input
+            type="text"
+            value={userName}
+            onChange={(e) => setUserName(e.target.value)}
+            className="flex-item"
+          />
+        </label>
+        <br />
+        <label>
+          Your Post:
+          <textarea
+            value={postText}
+            onChange={(e) => setPostText(e.target.value)}
+            className="flex-item"
+          ></textarea>
+        </label>
+        <br />
+        <button type="submit" className="flex-item">
+          Submit
+        </button>
+      </form>
+    </div>
   );
 }
 

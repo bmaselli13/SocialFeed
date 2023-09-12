@@ -9,9 +9,8 @@ function App() {
 
   // Function to add a new post
   const handleNewPost = (newPost) => {
-    // Add the new post to the posts array
-    const updatedPosts = posts.concat(newPost);
-    setPosts(updatedPosts);
+    // add the new post to the posts array
+    setPosts([...posts, newPost]);
   };
 
   return (
